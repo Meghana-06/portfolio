@@ -158,29 +158,32 @@ const Index = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
             <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-              Here are some of my key projects from internships, hackathons, and academic coursework
+              My latest projects reflect hands-on experience in cybersecurity and AI-driven platforms
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
               <CardHeader>
-                <CardTitle className="text-xl text-gray-900 group-hover:text-blue-600 transition-colors">AI-Powered Cloud Security</CardTitle>
-                <CardDescription>Machine learning model for detecting cloud infrastructure vulnerabilities</CardDescription>
+                <div className="flex items-center space-x-3 mb-4">
+                  <Shield className="text-blue-600 w-8 h-8" />
+                  <CardTitle className="text-2xl text-gray-900 group-hover:text-blue-600 transition-colors">MINI-SIEM</CardTitle>
+                </div>
+                <CardDescription className="text-lg">Security Information and Event Management System</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-6">
                   <Badge variant="secondary">Python</Badge>
-                  <Badge variant="secondary">TensorFlow</Badge>
+                  <Badge variant="secondary">ELK Stack</Badge>
                   <Badge variant="secondary">AWS</Badge>
-                  <Badge variant="secondary">Docker</Badge>
+                  <Badge variant="secondary">Real-time Monitoring</Badge>
                 </div>
-                <p className="text-gray-600 text-sm mb-4">
-                  Developed an AI system that monitors cloud infrastructure for security threats, 
-                  achieving 94% accuracy in threat detection.
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  Built a real-time security log monitoring system using Python and ELK Stack. 
+                  Integrated alert rules and AWS dashboards to support faster threat detection and incident response.
                 </p>
-                <Button variant="outline" size="sm" className="w-full group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                  <ExternalLink className="w-4 h-4 mr-2" />
+                <Button variant="outline" size="lg" className="w-full group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                  <ExternalLink className="w-5 h-5 mr-2" />
                   View Project
                 </Button>
               </CardContent>
@@ -188,49 +191,44 @@ const Index = () => {
 
             <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
               <CardHeader>
-                <CardTitle className="text-xl text-gray-900 group-hover:text-blue-600 transition-colors">Cybersecurity Dashboard</CardTitle>
-                <CardDescription>Real-time security monitoring and incident response system</CardDescription>
+                <div className="flex items-center space-x-3 mb-4">
+                  <Code className="text-green-600 w-8 h-8" />
+                  <CardTitle className="text-2xl text-gray-900 group-hover:text-green-600 transition-colors">CoachMe.AI</CardTitle>
+                </div>
+                <CardDescription className="text-lg">AI-Driven Career Development Suite</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge variant="secondary">React</Badge>
-                  <Badge variant="secondary">Node.js</Badge>
-                  <Badge variant="secondary">MongoDB</Badge>
-                  <Badge variant="secondary">D3.js</Badge>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  <Badge variant="secondary">Gemini API</Badge>
+                  <Badge variant="secondary">React 19</Badge>
+                  <Badge variant="secondary">Next.js</Badge>
+                  <Badge variant="secondary">NeonDB</Badge>
+                  <Badge variant="secondary">Prisma</Badge>
                 </div>
-                <p className="text-gray-600 text-sm mb-4">
-                  Built a comprehensive dashboard for monitoring network security events 
-                  and automating incident response workflows.
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  Engineered a full-stack platform for personalized skill-gap prediction, resume creation, 
+                  and mock tests. Integrated user analytics with NeonDB, Prisma, and Tailwind.
                 </p>
-                <Button variant="outline" size="sm" className="w-full group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                  <ExternalLink className="w-4 h-4 mr-2" />
+                <Button variant="outline" size="lg" className="w-full group-hover:bg-green-600 group-hover:text-white transition-colors">
+                  <ExternalLink className="w-5 h-5 mr-2" />
                   View Project
                 </Button>
               </CardContent>
             </Card>
+          </div>
 
-            <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
-              <CardHeader>
-                <CardTitle className="text-xl text-gray-900 group-hover:text-blue-600 transition-colors">Cloud Migration Tool</CardTitle>
-                <CardDescription>Automated tool for seamless cloud infrastructure migration</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge variant="secondary">Java</Badge>
-                  <Badge variant="secondary">Oracle Cloud</Badge>
-                  <Badge variant="secondary">Terraform</Badge>
-                  <Badge variant="secondary">Jenkins</Badge>
-                </div>
-                <p className="text-gray-600 text-sm mb-4">
-                  Created an automation tool that reduces cloud migration time by 60% 
-                  while ensuring zero downtime during the process.
-                </p>
-                <Button variant="outline" size="sm" className="w-full group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  View Project
-                </Button>
-              </CardContent>
-            </Card>
+          <div className="text-center mt-12">
+            <p className="text-gray-600 text-lg mb-6">
+              These projects combine real-world impact with modern tech stacks—check them out in my portfolio!
+            </p>
+            <div className="flex justify-center space-x-4">
+              <Button asChild variant="outline" size="lg">
+                <a href="https://github.com/Meghana-06" target="_blank" rel="noopener noreferrer">
+                  <Github className="w-5 h-5 mr-2" />
+                  GitHub Portfolio
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -627,24 +625,123 @@ const Index = () => {
             <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
-            {[
-              "Python", "Java", "C++", "SQL", "DBMS", "HTML/CSS",
-              "JavaScript", "React", "Node.js", "MongoDB", "GitHub", "Git",
-              "Oracle Cloud", "Google Cloud", "AWS", "Docker", "Kubernetes",
-              "TensorFlow", "Machine Learning", "Cybersecurity", "Cryptography",
-              "Digital Forensics", "Figma", "Canva", "Leadership", "Communication",
-              "Teamwork", "Problem Solving"
-            ].map((skill) => (
-              <div
-                key={skill}
-                className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-blue-50 group cursor-pointer"
-              >
-                <p className="text-center text-gray-700 font-medium group-hover:text-blue-600 transition-colors">
-                  {skill}
-                </p>
-              </div>
-            ))}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {/* Programming Languages */}
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="text-xl text-blue-600 flex items-center">
+                  <Code className="w-6 h-6 mr-2" />
+                  Programming Languages
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary">Python</Badge>
+                  <Badge variant="secondary">Java</Badge>
+                  <Badge variant="secondary">JavaScript</Badge>
+                  <Badge variant="secondary">TypeScript</Badge>
+                  <Badge variant="secondary">C++</Badge>
+                  <Badge variant="secondary">Bash/Shell Scripting</Badge>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Database & Backend */}
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="text-xl text-green-600 flex items-center">
+                  <Shield className="w-6 h-6 mr-2" />
+                  Database & Backend
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary">SQL</Badge>
+                  <Badge variant="secondary">DBMS</Badge>
+                  <Badge variant="secondary">MongoDB</Badge>
+                  <Badge variant="secondary">NeonDB</Badge>
+                  <Badge variant="secondary">Prisma</Badge>
+                  <Badge variant="secondary">Node.js</Badge>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Frontend & Web Technologies */}
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="text-xl text-purple-600 flex items-center">
+                  <Code className="w-6 h-6 mr-2" />
+                  Frontend & Web
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary">React</Badge>
+                  <Badge variant="secondary">React 19</Badge>
+                  <Badge variant="secondary">Next.js</Badge>
+                  <Badge variant="secondary">HTML/CSS</Badge>
+                  <Badge variant="secondary">Tailwind CSS</Badge>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Cloud & DevOps */}
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="text-xl text-blue-600 flex items-center">
+                  <Cloud className="w-6 h-6 mr-2" />
+                  Cloud & DevOps
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary">AWS</Badge>
+                  <Badge variant="secondary">Oracle Cloud</Badge>
+                  <Badge variant="secondary">Google Cloud</Badge>
+                  <Badge variant="secondary">Docker</Badge>
+                  <Badge variant="secondary">Linux</Badge>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* AI & Security */}
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="text-xl text-red-600 flex items-center">
+                  <Shield className="w-6 h-6 mr-2" />
+                  AI & Security
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary">Artificial Intelligence</Badge>
+                  <Badge variant="secondary">Gemini API</Badge>
+                  <Badge variant="secondary">Cybersecurity</Badge>
+                  <Badge variant="secondary">SIEM</Badge>
+                  <Badge variant="secondary">ELK Stack</Badge>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Tools & Soft Skills */}
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="text-xl text-orange-600 flex items-center">
+                  <Award className="w-6 h-6 mr-2" />
+                  Tools & Soft Skills
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary">Git/GitHub</Badge>
+                  <Badge variant="secondary">REST APIs</Badge>
+                  <Badge variant="secondary">Leadership</Badge>
+                  <Badge variant="secondary">Communication</Badge>
+                  <Badge variant="secondary">Problem Solving</Badge>
+                  <Badge variant="secondary">Teamwork</Badge>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
