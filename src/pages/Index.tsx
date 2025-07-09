@@ -248,7 +248,7 @@ const Index = () => {
               size="lg" 
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              <a href="https://drive.google.com/file/d/1yrzYMa1FNY77h63Yh3exuTVOHxPPqbow/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <a href="https://drive.google.com/file/d/1eaIk_30NNd13ByjLv5pf_ffOlIFsEep7/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="w-5 h-5 mr-2" />
                 Download Full Resume
               </a>
