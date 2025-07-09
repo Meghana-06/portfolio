@@ -371,6 +371,19 @@ const Index = () => {
 
                 <Card className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-6">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Internship Trainee</h4>
+                    <p className="text-blue-600 font-medium mb-2">Bharat Sanchar Nigam Limited (BSNL)</p>
+                    <p className="text-sm text-gray-600 mb-3">Summer 2024 | Remote</p>
+                    <div className="flex flex-wrap gap-1">
+                      <Badge variant="outline" className="text-xs">Telecommunications</Badge>
+                      <Badge variant="outline" className="text-xs">Network Infrastructure</Badge>
+                      <Badge variant="outline" className="text-xs">Technical Training</Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="hover:shadow-lg transition-shadow">
+                  <CardContent className="p-6">
                     <h4 className="text-lg font-semibold text-gray-900 mb-2">Python Programmer Intern</h4>
                     <p className="text-blue-600 font-medium mb-2">YBI Foundation</p>
                     <p className="text-sm text-gray-600 mb-3">Jul 2024 – Aug 2024 | Remote</p>
