@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -263,6 +262,37 @@ const Index = () => {
             </h3>
             
             <div className="space-y-8">
+              {/* BSNL Experience - Now First */}
+              <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-orange-600">
+                <CardContent className="p-8">
+                  <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-4">
+                    <div className="flex-1">
+                      <h4 className="text-2xl font-bold text-gray-900 mb-2">Software Development Intern</h4>
+                      <p className="text-orange-600 font-semibold text-lg mb-2">Bharat Sanchar Nigam Limited (BSNL)</p>
+                      <div className="flex flex-wrap items-center gap-4 text-gray-600 mb-4">
+                        <div className="flex items-center">
+                          <Calendar className="w-4 h-4 mr-2" />
+                          <span>Jun 2025 – Jul 2025</span>
+                        </div>
+                        <div className="flex items-center">
+                          <MapPin className="w-4 h-4 mr-2" />
+                          <span>Remote</span>
+                        </div>
+                      </div>
+                      <p className="text-gray-700 mb-4">
+                        Worked as a software development intern focusing on SIM verification systems and telecommunications infrastructure development.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge variant="secondary">Software Development</Badge>
+                    <Badge variant="secondary">SIM Verification</Badge>
+                    <Badge variant="secondary">Telecommunications</Badge>
+                    <Badge variant="secondary">Network Infrastructure</Badge>
+                  </div>
+                </CardContent>
+              </Card>
+
               {/* Current/Recent Positions */}
               <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-blue-600">
                 <CardContent className="p-8">
@@ -365,19 +395,6 @@ const Index = () => {
                     <div className="flex flex-wrap gap-1">
                       <Badge variant="outline" className="text-xs">HR Management</Badge>
                       <Badge variant="outline" className="text-xs">Team Handling</Badge>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Internship Trainee</h4>
-                    <p className="text-blue-600 font-medium mb-2">Bharat Sanchar Nigam Limited (BSNL)</p>
-                    <p className="text-sm text-gray-600 mb-3">Summer 2024 | Remote</p>
-                    <div className="flex flex-wrap gap-1">
-                      <Badge variant="outline" className="text-xs">Telecommunications</Badge>
-                      <Badge variant="outline" className="text-xs">Network Infrastructure</Badge>
-                      <Badge variant="outline" className="text-xs">Technical Training</Badge>
                     </div>
                   </CardContent>
                 </Card>
