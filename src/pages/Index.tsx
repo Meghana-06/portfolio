@@ -161,25 +161,49 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
+            <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+              <CardHeader>
+                <div className="flex items-center space-x-3 mb-4">
+                  <Shield className="text-red-600 w-8 h-8" />
+                  <CardTitle className="text-2xl text-gray-900 group-hover:text-red-600 transition-colors">SmartShield</CardTitle>
+                </div>
+                <CardDescription className="text-lg">AI-Powered Fraud Detection System</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  <Badge variant="secondary">Python</Badge>
+                  <Badge variant="secondary">Machine Learning</Badge>
+                  <Badge variant="secondary">REST API</Badge>
+                  <Badge variant="secondary">Anomaly Detection</Badge>
+                </div>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  Designed an AI-based fraud detection system at Union Bank of India, building backend anomaly detection logic with ML models and REST API workflows for secure transactions and proactive fraud prevention.
+                </p>
+                <Button variant="outline" size="lg" className="w-full group-hover:bg-red-600 group-hover:text-white transition-colors">
+                  <ExternalLink className="w-5 h-5 mr-2" />
+                  View Project
+                </Button>
+              </CardContent>
+            </Card>
+
             <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
               <CardHeader>
                 <div className="flex items-center space-x-3 mb-4">
                   <Shield className="text-blue-600 w-8 h-8" />
-                  <CardTitle className="text-2xl text-gray-900 group-hover:text-blue-600 transition-colors">MINI-SIEM</CardTitle>
+                  <CardTitle className="text-2xl text-gray-900 group-hover:text-blue-600 transition-colors">Mini-SIEM</CardTitle>
                 </div>
-                <CardDescription className="text-lg">Security Information and Event Management System</CardDescription>
+                <CardDescription className="text-lg">Threat Monitoring & Security Analytics</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2 mb-6">
                   <Badge variant="secondary">Python</Badge>
                   <Badge variant="secondary">ELK Stack</Badge>
-                  <Badge variant="secondary">AWS</Badge>
-                  <Badge variant="secondary">Real-time Monitoring</Badge>
+                  <Badge variant="secondary">AWS EC2</Badge>
+                  <Badge variant="secondary">Real-time Alerts</Badge>
                 </div>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  Built a real-time security log monitoring system using Python and ELK Stack. 
-                  Integrated alert rules and AWS dashboards to support faster threat detection and incident response.
+                  Deployed a mini-SIEM system to collect, parse, and analyze security logs in real-time. Implemented custom alert rules and dashboards for enhanced threat detection and incident response.
                 </p>
                 <Button variant="outline" size="lg" className="w-full group-hover:bg-blue-600 group-hover:text-white transition-colors">
                   <ExternalLink className="w-5 h-5 mr-2" />
@@ -200,13 +224,12 @@ const Index = () => {
                 <div className="flex flex-wrap gap-2 mb-6">
                   <Badge variant="secondary">Gemini API</Badge>
                   <Badge variant="secondary">React 19</Badge>
-                  <Badge variant="secondary">Next.js</Badge>
-                  <Badge variant="secondary">NeonDB</Badge>
+                  <Badge variant="secondary">Next.js 15</Badge>
                   <Badge variant="secondary">Prisma</Badge>
+                  <Badge variant="secondary">NeonDB</Badge>
                 </div>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  Engineered a full-stack platform for personalized skill-gap prediction, resume creation, 
-                  and mock tests. Integrated user analytics with NeonDB, Prisma, and Tailwind.
+                  Engineered a full-stack platform using Gemini API for AI-powered resume creation, MCQ testing, and personalized skill-path prediction with real-time dashboards and user analytics.
                 </p>
                 <Button variant="outline" size="lg" className="w-full group-hover:bg-green-600 group-hover:text-white transition-colors">
                   <ExternalLink className="w-5 h-5 mr-2" />
@@ -262,7 +285,39 @@ const Index = () => {
             </h3>
             
             <div className="space-y-8">
-              {/* BSNL Experience - Now First */}
+              {/* Union Bank Experience - Most Recent Technical Role */}
+              <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-red-600">
+                <CardContent className="p-8">
+                  <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-4">
+                    <div className="flex-1">
+                      <h4 className="text-2xl font-bold text-gray-900 mb-2">Internship Trainee</h4>
+                      <p className="text-red-600 font-semibold text-lg mb-2">Union Bank of India</p>
+                      <div className="flex flex-wrap items-center gap-4 text-gray-600 mb-4">
+                        <div className="flex items-center">
+                          <Calendar className="w-4 h-4 mr-2" />
+                          <span>June 2025 – July 2025</span>
+                        </div>
+                        <div className="flex items-center">
+                          <MapPin className="w-4 h-4 mr-2" />
+                          <span>On-Site, Tirupati</span>
+                        </div>
+                      </div>
+                      <p className="text-gray-700 mb-4 leading-relaxed">
+                        Contributed to "SmartShield" – an AI-based fraud detection system, leveraging anomaly detection for secure transactions. Applied machine learning and cybersecurity concepts to strengthen fraud prevention in core banking operations.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge variant="secondary">AI/ML</Badge>
+                    <Badge variant="secondary">Fraud Detection</Badge>
+                    <Badge variant="secondary">Anomaly Detection</Badge>
+                    <Badge variant="secondary">Cybersecurity</Badge>
+                    <Badge variant="secondary">Banking Systems</Badge>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* BSNL Experience */}
               <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-orange-600">
                 <CardContent className="p-8">
                   <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-4">
@@ -272,14 +327,86 @@ const Index = () => {
                       <div className="flex flex-wrap items-center gap-4 text-gray-600 mb-4">
                         <div className="flex items-center">
                           <Calendar className="w-4 h-4 mr-2" />
-                          <span>Jun 2025 – Jul 2025</span>
+                          <span>May 2025 – June 2025</span>
                         </div>
                         <div className="flex items-center">
                           <MapPin className="w-4 h-4 mr-2" />
-                          <span>On-site</span>
+                          <span>On-Site, Tirupati</span>
                         </div>
                       </div>
+                      <p className="text-gray-700 mb-4 leading-relaxed">
+                        Supported SIM verification processes and ensured compliance with digital identity and authentication protocols. Assisted in backend operations including customer data validation, information management, and audit support.
+                      </p>
                     </div>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge variant="secondary">SIM Verification</Badge>
+                    <Badge variant="secondary">KYC Management</Badge>
+                    <Badge variant="secondary">Data Validation</Badge>
+                    <Badge variant="secondary">IT Workflows</Badge>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Codec Technologies Experience */}
+              <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-indigo-600">
+                <CardContent className="p-8">
+                  <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-4">
+                    <div className="flex-1">
+                      <h4 className="text-2xl font-bold text-gray-900 mb-2">SIEM Developer Intern</h4>
+                      <p className="text-indigo-600 font-semibold text-lg mb-2">Codec Technologies India</p>
+                      <div className="flex flex-wrap items-center gap-4 text-gray-600 mb-4">
+                        <div className="flex items-center">
+                          <Calendar className="w-4 h-4 mr-2" />
+                          <span>January 2025 – March 2025</span>
+                        </div>
+                        <div className="flex items-center">
+                          <MapPin className="w-4 h-4 mr-2" />
+                          <span>Hybrid, Bengaluru</span>
+                        </div>
+                      </div>
+                      <p className="text-gray-700 mb-4 leading-relaxed">
+                        Built a mini SIEM system to collect, parse, and analyze real-time event logs using Python, regex, and Linux scripting. Designed log ingestion pipelines and custom alert rules, enhancing threat visibility and anomaly detection.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge variant="secondary">Python</Badge>
+                    <Badge variant="secondary">ELK Stack</Badge>
+                    <Badge variant="secondary">SIEM</Badge>
+                    <Badge variant="secondary">AWS Logs</Badge>
+                    <Badge variant="secondary">Security Analytics</Badge>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* IBM SkillBuild Experience */}
+              <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-cyan-600">
+                <CardContent className="p-8">
+                  <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-4">
+                    <div className="flex-1">
+                      <h4 className="text-2xl font-bold text-gray-900 mb-2">Cybersecurity Intern</h4>
+                      <p className="text-cyan-600 font-semibold text-lg mb-2">IBM SkillBuild (Edunet)</p>
+                      <div className="flex flex-wrap items-center gap-4 text-gray-600 mb-4">
+                        <div className="flex items-center">
+                          <Calendar className="w-4 h-4 mr-2" />
+                          <span>January 2025 – March 2025</span>
+                        </div>
+                        <div className="flex items-center">
+                          <MapPin className="w-4 h-4 mr-2" />
+                          <span>Remote, Bengaluru</span>
+                        </div>
+                      </div>
+                      <p className="text-gray-700 mb-4 leading-relaxed">
+                        Completed a 6-week virtual internship on Cybersecurity under the guidance of Edunet Foundation and AICTE, supported by IBM SkillsBuild. Gained hands-on experience in threat detection, risk management, secure system design, and network security.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge variant="secondary">Cybersecurity</Badge>
+                    <Badge variant="secondary">Threat Detection</Badge>
+                    <Badge variant="secondary">Risk Management</Badge>
+                    <Badge variant="secondary">Network Security</Badge>
                   </div>
                 </CardContent>
               </Card>
@@ -492,12 +619,12 @@ const Index = () => {
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="space-y-2">
-                    <Badge variant="outline" className="w-full justify-center py-2">Oracle Cloud Infrastructure 2025 Certified</Badge>
-                    <Badge variant="outline" className="w-full justify-center py-2">Google Cloud Computing Certificate</Badge>
-                    <Badge variant="outline" className="w-full justify-center py-2">AWS Community Builders</Badge>
+                    <Badge variant="outline" className="w-full justify-center py-2">Oracle APEX Cloud, Data Science, OCI</Badge>
+                    <Badge variant="outline" className="w-full justify-center py-2">Google Cloud Computing</Badge>
+                    <Badge variant="outline" className="w-full justify-center py-2">Google Cloud Cybersecurity</Badge>
                   </div>
                   <p className="text-sm text-gray-600 pt-2">
-                    Expertise in OCI architecture, Kubernetes, App Engine, and scalable cloud solutions.
+                    Expertise in Oracle cloud architecture, Google Cloud Platform, and scalable cloud solutions.
                   </p>
                 </CardContent>
               </Card>
@@ -513,8 +640,8 @@ const Index = () => {
                 <CardContent className="space-y-3">
                   <div className="space-y-2">
                     <Badge variant="outline" className="w-full justify-center py-2">Salesforce Certified AI Associate</Badge>
-                    <Badge variant="outline" className="w-full justify-center py-2">GUVI Generative AI</Badge>
-                    <Badge variant="outline" className="w-full justify-center py-2">Kodacy AI Introduction</Badge>
+                    <Badge variant="outline" className="w-full justify-center py-2">Accenture Artificial Intelligence</Badge>
+                    <Badge variant="outline" className="w-full justify-center py-2">AI & ML Foundations</Badge>
                   </div>
                   <p className="text-sm text-gray-600 pt-2">
                     Practical insights into AI applications, ethical considerations, and real-world implementations.
@@ -532,10 +659,10 @@ const Index = () => {
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="space-y-2">
+                    <Badge variant="outline" className="w-full justify-center py-2">Google Cloud Cybersecurity</Badge>
                     <Badge variant="outline" className="w-full justify-center py-2">IBM SkillsBuild Cybersecurity</Badge>
-                    <Badge variant="outline" className="w-full justify-center py-2">Cisco Introduction to Cybersecurity</Badge>
-                    <Badge variant="outline" className="w-full justify-center py-2">Stanford Cryptography I</Badge>
-                    <Badge variant="outline" className="w-full justify-center py-2">Digital Forensics</Badge>
+                    <Badge variant="outline" className="w-full justify-center py-2">Stanford University - Cryptography</Badge>
+                    <Badge variant="outline" className="w-full justify-center py-2">Cisco Cybersecurity Essentials</Badge>
                   </div>
                   <p className="text-sm text-gray-600 pt-2">
                     Expertise in cryptographic protocols, threat detection, and digital defense strategies.
@@ -553,12 +680,12 @@ const Index = () => {
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="space-y-2">
-                    <Badge variant="outline" className="w-full justify-center py-2">Python (NIELIT & Cisco)</Badge>
-                    <Badge variant="outline" className="w-full justify-center py-2">SkillRack Kickstart Code Solutions</Badge>
-                    <Badge variant="outline" className="w-full justify-center py-2">C++ Bootcamp</Badge>
+                    <Badge variant="outline" className="w-full justify-center py-2">Python Programming</Badge>
+                    <Badge variant="outline" className="w-full justify-center py-2">Java Development</Badge>
+                    <Badge variant="outline" className="w-full justify-center py-2">DSA & Algorithms</Badge>
                   </div>
                   <p className="text-sm text-gray-600 pt-2">
-                    Strong foundation in data structures, algorithms, and application development.
+                    Strong foundation in data structures, algorithms, and full-stack application development.
                   </p>
                 </CardContent>
               </Card>
@@ -592,10 +719,10 @@ const Index = () => {
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="space-y-2">
-                    <Badge variant="outline" className="w-full justify-center py-2">IBM SkillsBuild Web Development</Badge>
-                    <Badge variant="outline" className="w-full justify-center py-2">Google Git & GitHub</Badge>
+                    <Badge variant="outline" className="w-full justify-center py-2">IBM Web Development</Badge>
                     <Badge variant="outline" className="w-full justify-center py-2">Google Agile Project Management</Badge>
-                    <Badge variant="outline" className="w-full justify-center py-2">Foundations of UX Design</Badge>
+                    <Badge variant="outline" className="w-full justify-center py-2">Git & GitHub</Badge>
+                    <Badge variant="outline" className="w-full justify-center py-2">React.js & Node.js</Badge>
                   </div>
                   <p className="text-sm text-gray-600 pt-2">
                     Comprehensive web development stack with version control and project management expertise.
@@ -605,32 +732,25 @@ const Index = () => {
             </div>
 
             {/* Additional Specialized Certifications */}
-            <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <Card className="hover:shadow-lg transition-shadow text-center">
                 <CardContent className="p-4">
                   <h4 className="font-semibold text-gray-900 mb-2">IoT Technologies</h4>
-                  <Badge variant="secondary" className="w-full">UC San Diego IoT Multimedia</Badge>
+                  <Badge variant="secondary" className="w-full">UC San Diego - Internet of Things</Badge>
                 </CardContent>
               </Card>
 
               <Card className="hover:shadow-lg transition-shadow text-center">
                 <CardContent className="p-4">
-                  <h4 className="font-semibold text-gray-900 mb-2">Sustainability</h4>
-                  <Badge variant="secondary" className="w-full">Nestlé E-Learning 2025</Badge>
+                  <h4 className="font-semibold text-gray-900 mb-2">Oracle Certified</h4>
+                  <Badge variant="secondary" className="w-full">Oracle Foundation Associate</Badge>
                 </CardContent>
               </Card>
 
               <Card className="hover:shadow-lg transition-shadow text-center">
                 <CardContent className="p-4">
-                  <h4 className="font-semibold text-gray-900 mb-2">Finance</h4>
-                  <Badge variant="secondary" className="w-full">SEBI Investor Certification</Badge>
-                </CardContent>
-              </Card>
-
-              <Card className="hover:shadow-lg transition-shadow text-center">
-                <CardContent className="p-4">
-                  <h4 className="font-semibold text-gray-900 mb-2">HR Recruitment</h4>
-                  <Badge variant="secondary" className="w-full">Subhansh Sewa Trust</Badge>
+                  <h4 className="font-semibold text-gray-900 mb-2">Google Cloud</h4>
+                  <Badge variant="secondary" className="w-full">Legend Level - 600+ Labs</Badge>
                 </CardContent>
               </Card>
             </div>
@@ -661,8 +781,9 @@ const Index = () => {
                   <Badge variant="secondary">Java</Badge>
                   <Badge variant="secondary">JavaScript</Badge>
                   <Badge variant="secondary">TypeScript</Badge>
-                  <Badge variant="secondary">C++</Badge>
-                  <Badge variant="secondary">Bash/Shell Scripting</Badge>
+                  <Badge variant="secondary">C/C++</Badge>
+                  <Badge variant="secondary">SQL</Badge>
+                  <Badge variant="secondary">Bash/Shell</Badge>
                 </div>
               </CardContent>
             </Card>
