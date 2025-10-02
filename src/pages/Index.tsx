@@ -55,6 +55,7 @@ const Index = () => {
             <div className="hidden md:flex space-x-8">
               <button onClick={() => scrollToSection('about')} className="text-gray-600 hover:text-blue-600 transition-colors">About</button>
               <button onClick={() => scrollToSection('projects')} className="text-gray-600 hover:text-blue-600 transition-colors">Projects</button>
+              <button onClick={() => scrollToSection('research')} className="text-gray-600 hover:text-blue-600 transition-colors">Research</button>
               <button onClick={() => scrollToSection('experience')} className="text-gray-600 hover:text-blue-600 transition-colors">Experience</button>
               <button onClick={() => scrollToSection('skills')} className="text-gray-600 hover:text-blue-600 transition-colors">Skills</button>
               <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-blue-600 transition-colors">Contact</button>
@@ -251,6 +252,51 @@ const Index = () => {
                 </a>
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Research & Publications Section */}
+      <section id="research" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Research & Publications</h2>
+            <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
+            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+              Passionate about advancing knowledge in cybersecurity and AI through research
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-t-4 border-t-blue-600">
+              <CardHeader>
+                <CardTitle className="text-xl text-gray-900">Blockchain as a Cyber Defense</CardTitle>
+                <CardDescription className="flex items-center gap-2 text-blue-600">
+                  <Award className="w-4 h-4" />
+                  Submitted Paper • 2024
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Badge variant="outline" className="bg-blue-50 text-blue-700 border-blue-200">
+                  Cybersecurity
+                </Badge>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-t-4 border-t-purple-600">
+              <CardHeader>
+                <CardTitle className="text-xl text-gray-900">Verdict Vision</CardTitle>
+                <CardDescription className="flex items-center gap-2 text-purple-600">
+                  <Award className="w-4 h-4" />
+                  Submitted Paper • 2024
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Badge variant="outline" className="bg-purple-50 text-purple-700 border-purple-200">
+                  AI & ML
+                </Badge>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
