@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { 
   Mail, 
   Linkedin, 
@@ -19,7 +20,8 @@ import {
   Heart,
   Send,
   Calendar,
-  MapPin
+  MapPin,
+  Code2
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -46,19 +48,20 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-white">
+    <div className="min-h-screen bg-background transition-colors duration-300">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-200 z-50">
+      <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="font-bold text-xl text-gray-800">Meghana Y.</div>
-            <div className="hidden md:flex space-x-8">
-              <button onClick={() => scrollToSection('about')} className="text-gray-600 hover:text-blue-600 transition-colors">About</button>
-              <button onClick={() => scrollToSection('projects')} className="text-gray-600 hover:text-blue-600 transition-colors">Projects</button>
-              <button onClick={() => scrollToSection('research')} className="text-gray-600 hover:text-blue-600 transition-colors">Research</button>
-              <button onClick={() => scrollToSection('experience')} className="text-gray-600 hover:text-blue-600 transition-colors">Experience</button>
-              <button onClick={() => scrollToSection('skills')} className="text-gray-600 hover:text-blue-600 transition-colors">Skills</button>
-              <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-blue-600 transition-colors">Contact</button>
+            <div className="font-bold text-xl text-foreground">Meghana Y.</div>
+            <div className="hidden md:flex space-x-8 items-center">
+              <button onClick={() => scrollToSection('about')} className="text-muted-foreground hover:text-primary transition-colors">About</button>
+              <button onClick={() => scrollToSection('projects')} className="text-muted-foreground hover:text-primary transition-colors">Projects</button>
+              <button onClick={() => scrollToSection('research')} className="text-muted-foreground hover:text-primary transition-colors">Research</button>
+              <button onClick={() => scrollToSection('experience')} className="text-muted-foreground hover:text-primary transition-colors">Experience</button>
+              <button onClick={() => scrollToSection('skills')} className="text-muted-foreground hover:text-primary transition-colors">Skills</button>
+              <button onClick={() => scrollToSection('contact')} className="text-muted-foreground hover:text-primary transition-colors">Contact</button>
+              <ThemeToggle />
             </div>
           </div>
         </div>
@@ -68,12 +71,42 @@ const Index = () => {
       <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
         <div className="max-w-4xl mx-auto text-center">
           <div className="animate-fade-in">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
-              Meghana <span className="text-blue-600">Yagannagari</span>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6">
+              Meghana <span className="text-blue-600 dark:text-blue-400">Yagannagari</span>
             </h1>
-            <p className="text-xl sm:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
               CSE Student | AI, Cloud & Cybersecurity Enthusiast | Lifelong Learner
             </p>
+            
+            {/* Social Links */}
+            <div className="flex justify-center gap-4 mb-8 flex-wrap">
+              <Button asChild variant="outline" size="icon" className="rounded-full hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all">
+                <a href="https://github.com/Meghana-06" target="_blank" rel="noopener noreferrer">
+                  <Github className="w-5 h-5" />
+                </a>
+              </Button>
+              <Button asChild variant="outline" size="icon" className="rounded-full hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all">
+                <a href="https://www.linkedin.com/in/meghana-yagannagari-465b352b5/" target="_blank" rel="noopener noreferrer">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+              </Button>
+              <Button asChild variant="outline" size="icon" className="rounded-full hover:bg-orange-600 hover:text-white hover:border-orange-600 transition-all">
+                <a href="https://leetcode.com/u/meghanayagannagari/" target="_blank" rel="noopener noreferrer">
+                  <Code2 className="w-5 h-5" />
+                </a>
+              </Button>
+              <Button asChild variant="outline" size="icon" className="rounded-full hover:bg-green-600 hover:text-white hover:border-green-600 transition-all">
+                <a href="https://www.hackerrank.com/profile/yagannagarimegh1" target="_blank" rel="noopener noreferrer">
+                  <Code className="w-5 h-5" />
+                </a>
+              </Button>
+              <Button asChild variant="outline" size="icon" className="rounded-full hover:bg-green-700 hover:text-white hover:border-green-700 transition-all">
+                <a href="https://www.geeksforgeeks.org/user/yagannagarp1ok/" target="_blank" rel="noopener noreferrer">
+                  <Code2 className="w-5 h-5" />
+                </a>
+              </Button>
+            </div>
+
             <Button 
               onClick={() => scrollToSection('projects')}
               size="lg" 
@@ -83,7 +116,7 @@ const Index = () => {
             </Button>
           </div>
           <div className="mt-16 animate-bounce">
-            <ChevronDown className="mx-auto text-gray-400 w-8 h-8" />
+            <ChevronDown className="mx-auto text-muted-foreground w-8 h-8" />
           </div>
         </div>
       </section>
